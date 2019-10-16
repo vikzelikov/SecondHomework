@@ -5,6 +5,7 @@ gradle/
 .idea/
 app/app.iml
 app/build/
+app/proguard-rules.pro
 *.iml
 gradlew.bat
 gradlew
