@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SecondHomework</string>
+    <string name="indicator_name">Индикатор</string>
+    <string name="next_activity">Next activity</string>
+</resources>
