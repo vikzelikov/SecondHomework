@@ -26,11 +26,11 @@ class FirstActivity : AppCompatActivity() {
     private fun setListeners() {
         secondActivityButton.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
-            startActivityForResult(intent,2)
+            startActivityForResult(intent, 2)
         }
         thirdActivityButton.setOnClickListener {
             val intent = Intent(this, ThirdActivity::class.java)
-            startActivityForResult(intent,3)
+            startActivityForResult(intent, 3)
         }
     }
 
