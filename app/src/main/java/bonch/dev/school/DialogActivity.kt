@@ -23,7 +23,7 @@ class DialogActivity : AppCompatActivity() {
 
     private fun setListeners() {
         dialogButton.setOnClickListener {
-            dialogFragment.show(fm, "dialog")
+            dialogFragment.show(fm, "Dialog")
         }
     }
 
