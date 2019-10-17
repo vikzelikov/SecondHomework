@@ -6,12 +6,15 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".ThirdActivity">
+    tools:context=".DialogActivity">
 
     <Button
-        android:id="@+id/finish_button"
+        android:id="@+id/dialog_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/finish"/>
+        android:text="@string/dialog_popup"/>
+
+
+
 
 </LinearLayout>
