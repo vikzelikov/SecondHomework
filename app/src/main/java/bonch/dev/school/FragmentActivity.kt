@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class FragmentActivity : AppCompatActivity() {
     val fm = supportFragmentManager
-    private var firstFragment = FirstFragment(this)
+    private var firstFragment = FirstFragment()
     private var secondFragment = SecondFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

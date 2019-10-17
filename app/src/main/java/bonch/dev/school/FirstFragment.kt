@@ -7,8 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 
-class FirstFragment(fragmentActivity: FragmentActivity):Fragment() {
-    private var fragmentActivity: FragmentActivity
+class FirstFragment:Fragment() {
     private lateinit var nextActivityButton: Button
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -19,13 +18,10 @@ class FirstFragment(fragmentActivity: FragmentActivity):Fragment() {
         val view = inflater.inflate(R.layout.first_fragment, container,false)
         nextActivityButton = view.findViewById(R.id.next_activity_button)
         nextActivityButton.setOnClickListener{
-            this.fragmentActivity.replaceFragment()
+            (activity as FragmentActivity).replaceFragment()
         }
         return view
     }
 
-    init {
-        this.fragmentActivity = fragmentActivity
-    }
 
 }
