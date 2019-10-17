@@ -43,7 +43,6 @@ class FirstActivity : AppCompatActivity() {
         }else{
             Toast.makeText(this,"Button not pressed, activity #${requestCode}", Toast.LENGTH_LONG).show()
         }
-
     }
 
 }
