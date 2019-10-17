@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 class FirstActivity : AppCompatActivity() {
 
     private lateinit var secondActivityButton: Button
+    private lateinit var thirdActivityButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,13 +20,17 @@ class FirstActivity : AppCompatActivity() {
 
     private fun initializeViews() {
         secondActivityButton = findViewById(R.id.second_activity_button)
+        thirdActivityButton = findViewById(R.id.third_activity_button)
     }
 
     private fun setListeners() {
         secondActivityButton.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
-            //set values for SecondActivity
-            startActivityForResult(intent,1)
+            startActivityForResult(intent,2)
+        }
+        thirdActivityButton.setOnClickListener {
+            val intent = Intent(this, ThirdActivity::class.java)
+            startActivityForResult(intent,3)
         }
     }
 
@@ -34,10 +39,9 @@ class FirstActivity : AppCompatActivity() {
 
         val isBtn = data?.getIntExtra("btn", -1)
         if (isBtn == 1){
-            Toast.makeText(this, "Кнопка была нажата", Toast.LENGTH_LONG).show()
-
+            Toast.makeText(this, "Button pressed, activity #${requestCode}", Toast.LENGTH_LONG).show()
         }else{
-            Toast.makeText(this,"Кнопка не была нажата", Toast.LENGTH_LONG).show()
+            Toast.makeText(this,"Button not pressed, activity #${requestCode}", Toast.LENGTH_LONG).show()
         }
 
     }
