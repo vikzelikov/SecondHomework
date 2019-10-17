@@ -36,10 +36,6 @@ class MainActivity : AppCompatActivity() {
             indicatorButton.isEnabled = false
         }
 
-        indicatorButton.setOnClickListener {
-            indicatorButton.isEnabled = false
-        }
-
         counterButton.setOnClickListener {
             counter.increment()
             counterButton.text = "${counter.currentCount}"
@@ -61,8 +57,6 @@ class MainActivity : AppCompatActivity() {
         } else {
             counter = Counter(savedInstanceState.getInt("TAP_AMOUNTS"))
             indicatorButton.isEnabled = savedInstanceState.getBoolean("IS_CLICKED")
-            //Data type of <EditText> is "editable", not String
-            textField.text = Editable.Factory.getInstance().newEditable(savedInstanceState.getString("TEXT_FILED"))
         }
         counterButton.text = "${counter.currentCount}"
     }
@@ -71,6 +65,5 @@ class MainActivity : AppCompatActivity() {
         super.onSaveInstanceState(outState)
         outState.putInt("TAP_AMOUNTS", counter.currentCount)
         outState.putBoolean("IS_CLICKED", indicatorButton.isEnabled)
-        outState.putString("TEXT_FILED", textField.text.toString())
     }
 }
