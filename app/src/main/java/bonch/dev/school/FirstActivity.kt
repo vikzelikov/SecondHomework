@@ -39,7 +39,6 @@ class FirstActivity : AppCompatActivity() {
         }else{
             Toast.makeText(this,"Кнопка не была нажата", Toast.LENGTH_LONG).show()
         }
-
     }
 
 }
