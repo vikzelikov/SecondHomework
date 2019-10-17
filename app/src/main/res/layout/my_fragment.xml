@@ -5,12 +5,12 @@
     android:layout_height="match_parent"
     tools:context=".FragmentActivity"
     android:orientation="vertical"
-    android:background="@android:color/holo_orange_dark"
-    android:id="@+id/first_fragment">
 
-    <Button
-        android:id="@+id/next_activity_button"
+    android:id="@+id/my_fragment">
+
+    <TextView
+        android:id="@+id/text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/next_activity" />
+        android:textSize="20sp" />
 </FrameLayout>
